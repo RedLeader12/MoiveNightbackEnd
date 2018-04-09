@@ -1,5 +1,5 @@
 exports.up = (knex, Promise) => {
-    return knex.schema.createTable('favouritemovies', (table) => {
+    return knex.schema.createTable('favourites', (table) => {
       table.increments();
       table.text('overview').notNullable();
       table.string('poster_path').notNullable();
@@ -11,5 +11,5 @@ exports.up = (knex, Promise) => {
   };
   
   exports.down = (knex, Promise) => {
-    return knex.schema.dropTable('favouritemovies');
+    return knex.schema.dropTable('favourites');
   };
